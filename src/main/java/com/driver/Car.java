@@ -8,12 +8,6 @@ public class Car extends Vehicle {
     private boolean isManual;
     private int currentGear;
     private int seats;
-
-    public Car(String name, int i, int i1, int i2, boolean isManual, String f1) {
-        super(name);
-    }
-
-
     public int getWheels() {
         return wheels;
     }
@@ -50,9 +44,14 @@ public class Car extends Vehicle {
         this.isManual=isManual;
     }
 
-    public Car(String name,  boolean isManual) {
+    public Car(String name, int wheels, int doors, int gears, boolean isManual, String type) {
         super(name);
-        this.isManual = isManual;
+        this.wheels=wheels;
+        this.doors=doors;
+        this.gears=gears;
+        this.type=type;
+        this.isManual=isManual;
+
     }
 
     public Car(String name, int wheels, String type, int doors, int gears, boolean isManual, int currentGear, int seats) {
