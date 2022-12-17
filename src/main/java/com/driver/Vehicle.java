@@ -25,16 +25,13 @@ public class Vehicle {
     }
 
     public void setCurrentSpeed(int currentSpeed) {
-        this.currentSpeed = currentSpeed;
+        this.currentSpeed += currentSpeed;
     }
 
     public int getCurrentDirection() {
         return currentDirection;
     }
 
-    public void setCurrentDirection(int currentDirection) {
-        this.currentDirection = currentDirection;
-    }
 
     public void steer(int direction){
         this.currentDirection=this.currentDirection+direction;

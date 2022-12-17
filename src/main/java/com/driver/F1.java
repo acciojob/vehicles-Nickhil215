@@ -12,9 +12,19 @@ public class F1 extends Car {
     }
 
     public void accelerate(int rate) {
-        int newSpeed = this.getCurrentSpeed() + rate;
+        /**
+          speed 0: gear 1
+          speed 1-50: gear 1
+          speed 51-100: gear 2
+          speed 101-150: gear 3
+          speed 151-200: gear 4
+          speed 201-250: gear 5
+          speed more than 250: gear 6
+         */
+        int newSpeed=0;
+        this.setCurrentSpeed(rate);
+        newSpeed=getCurrentSpeed();
         if (newSpeed == 0) {
-            this.stop();
             this.changeGear(1);
         } else if (newSpeed > 0 && newSpeed <= 50) {
             this.changeGear(1);
