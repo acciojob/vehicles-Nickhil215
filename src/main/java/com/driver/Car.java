@@ -28,6 +28,12 @@ public class Car extends Vehicle {
         return isManual;
     }
 
+    public Car(String name, boolean isManual) {
+        super(name);
+
+        this.isManual=isManual;
+    }
+
     public int getCurrentGear() {
         return currentGear;
     }
@@ -44,14 +50,6 @@ public class Car extends Vehicle {
         this.isManual=isManual;
     }
 
-    public Car(String name, boolean isManual) {
-        super(name);
-        this.wheels=wheels;
-        this.doors=doors;
-        this.gears=gears;
-        this.type=type;
-        this.isManual=isManual;
-    }
 
 //    java.lang.String,int,int,int,boolean,java.lang.String,int
 
